@@ -308,12 +308,12 @@ section { padding: var(--space-3xl) 0; }
   .hero-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
 }
 .hero h1 {
-     color: var(--color-white);
-     margin-bottom: var(--space-md);
-     max-width: 560px;
-     word-break: normal;
-     overflow-wrap: break-word;
-   }
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+  max-width: 560px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
 .hero h1 .accent {
   background: linear-gradient(120deg, var(--color-blue-500), #64b5f6);
   -webkit-background-clip: text;
@@ -1106,4 +1106,45 @@ section { padding: var(--space-3xl) 0; }
   .fb-chat-bubble { max-width: 180px; font-size: 0.85rem; }
   .fb-chat-button { width: 54px; height: 54px; }
   .fb-chat-button svg { width: 28px; height: 28px; }
+}
+
+/* ========================================
+   REAL LOGO STYLES (drop + waves + text)
+   ======================================== */
+
+/* Nav: icon on left, "Sunbelt Plumbing" wordmark to the right */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-blue-900);
+}
+.logo-icon {
+  width: 34px;
+  height: auto;
+  display: block;
+}
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-blue-900);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* Footer: full stacked logo (drop + waves + text) */
+.logo-footer {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Mobile: slightly smaller nav logo */
+@media (max-width: 640px) {
+  .logo-icon { width: 28px; }
+  .logo-text { font-size: 1rem; }
+  .logo-footer { width: 100px; }
 }
