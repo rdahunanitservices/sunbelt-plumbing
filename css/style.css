@@ -307,7 +307,13 @@ section { padding: var(--space-3xl) 0; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
 }
-.hero h1 { color: var(--color-white); margin-bottom: var(--space-md); }
+.hero h1 {
+     color: var(--color-white);
+     margin-bottom: var(--space-md);
+     max-width: 560px;
+     word-break: normal;
+     overflow-wrap: break-word;
+   }
 .hero h1 .accent {
   background: linear-gradient(120deg, var(--color-blue-500), #64b5f6);
   -webkit-background-clip: text;
