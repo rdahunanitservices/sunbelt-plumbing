@@ -1141,3 +1141,115 @@ section { padding: var(--space-3xl) 0; }
   .logo-nav { height: 32px !important; }
   .logo-footer { width: 90px !important; max-width: 90px !important; }
 }
+
+/* ========================================
+   SERVICE AREAS SECTION
+   ======================================== */
+.service-areas {
+  padding: var(--space-2xl) 0;
+  background: var(--color-grey-50);
+  border-top: 1px solid var(--color-grey-200);
+  border-bottom: 1px solid var(--color-grey-200);
+}
+.service-areas .section-header h2 em {
+  color: var(--color-yellow-600);
+  font-style: normal;
+  font-weight: 800;
+}
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.area-chip {
+  background: var(--color-white);
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-blue-900);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s;
+}
+.area-chip:hover {
+  border-color: var(--color-blue-600);
+  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.08);
+  transform: translateY(-1px);
+}
+.area-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-yellow-500);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(245, 183, 32, 0.2);
+}
+.areas-note {
+  text-align: center;
+  margin-top: var(--space-lg);
+  color: var(--color-grey-700);
+  font-size: 0.95rem;
+}
+.areas-note a {
+  color: var(--color-blue-700);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ========================================
+   SUNBELT PLEDGE — more visual emphasis
+   ======================================== */
+.why-section {
+  background: var(--color-white);
+}
+.why-section .section-header p {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  color: var(--color-grey-700);
+}
+.why-card {
+  text-align: left;
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-grey-200);
+  border-radius: var(--radius-md);
+  transition: all 0.25s;
+  border-left: 4px solid var(--color-yellow-500);
+}
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 76, 129, 0.08);
+  border-left-color: var(--color-blue-600);
+}
+.why-card h3 {
+  color: var(--color-blue-900);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+.why-card p {
+  color: var(--color-grey-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.why-card .why-icon {
+  background: var(--color-blue-50);
+  color: var(--color-blue-700);
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-sm);
+}
+.why-card .why-icon svg { width: 22px; height: 22px; }
+
+/* Mobile: stack service areas */
+@media (max-width: 640px) {
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+}
